@@ -25,23 +25,7 @@ public class result extends AppCompatActivity {
         bAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(result.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-    };
-
-    @Override
-    public void onBackPressed()
-    {
-        Button bAgain = (Button) findViewById(R.id.again);
-        bAgain.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(result.this, MainActivity.class);
+                Intent intent = new Intent(result.this, start.class);
                 startActivity(intent);
                 finish();
             }

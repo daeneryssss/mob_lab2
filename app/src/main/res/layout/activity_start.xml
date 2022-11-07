@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/resultBackground"
     tools:context=".start">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="Логічна гра"
+        android:textColor="@color/buttonBackground"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -23,10 +25,10 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="80dp"
-        android:text="таймер працює"
-        android:textSize="24sp"
         android:checked="true"
         android:onClick="checkTimer"
+        android:text="таймер працює"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +40,10 @@
         android:layout_height="70dp"
         android:layout_marginBottom="80dp"
         android:background="@color/buttonBackground"
+        android:onClick="startGame"
         android:text="Старт"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:onClick="startGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -59,25 +61,25 @@
             android:id="@+id/zero"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="при неправильній відповіді кількість очок не зменшується"
-            android:textSize="20sp"
             android:checked="true"
-            android:onClick="wrongAnswer" />
+            android:onClick="wrongAnswer"
+            android:text="при неправильній відповіді кількість очок не зменшується"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/minus"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:onClick="wrongAnswer"
             android:text="віднімати очки за неправильну відповідь"
-            android:textSize="20sp"
-            android:onClick="wrongAnswer" />
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/endGame"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:onClick="wrongAnswer"
             android:text="неправильна відповідь завершує гру"
-            android:textSize="20sp"
-            android:onClick="wrongAnswer" />
+            android:textSize="20sp" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10561437755",
+    "project_id": "logicgame-be4b7",
+    "storage_bucket": "logicgame-be4b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10561437755:android:cf186762ce61222d881c1e",
+        "android_client_info": {
+          "package_name": "com.example.lab2_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10561437755-flreck35dgkhuonka1f5rc9gbvefbe64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgT54aW_ypcHUUsTDl7FkFg8ZU4_m6wKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10561437755-flreck35dgkhuonka1f5rc9gbvefbe64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

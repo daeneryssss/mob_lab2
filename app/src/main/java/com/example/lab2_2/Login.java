@@ -3,6 +3,9 @@ package com.example.lab2_2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +39,40 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_param, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        switch (id)
+        {
+            case R.id.menuGame:
+                Intent ilg = new Intent(Login.this, MainActivity.class);
+                startActivity(ilg);
+                return true;
+            case R.id.menuLogin:
+                Toast.makeText(Login.this, "Ви на екрані входу!", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.menuParam:
+                Intent ilp = new Intent(Login.this, start.class);
+                startActivity(ilp);
+                return true;
+            case R.id.menuReg:
+                Intent ilr = new Intent(Login.this, Registration.class);
+                startActivity(ilr);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void checkDataEntered(String login, String password)
     {
         if (login.equals(""))
@@ -58,6 +95,7 @@ public class Login extends AppCompatActivity {
                         {
                             Toast.makeText(Login.this, "Вхід гравця: успішно!", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(Login.this, start.class);
+                            i.putExtra("login", login);
                             startActivity(i);
                         }
                         else

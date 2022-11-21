@@ -5,17 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 import org.w3c.dom.Text;
+import android.view.Menu;
+import android.widget.Toast;
 
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    String login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Intent i = getIntent();
         timerIsOn = i.getBooleanExtra("timerIsOn", true);
         level = i.getIntExtra("level", 1);
+        login = i.getStringExtra("login");
 
         TextView txtSeconds = (TextView) findViewById(R.id.txtSeconds);
         if (timerIsOn == true) {
@@ -67,6 +75,40 @@ public class MainActivity extends AppCompatActivity {
                 test.setText(String.valueOf(points));
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_param, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        switch (id)
+        {
+            case R.id.menuGame:
+                Toast.makeText(MainActivity.this, "Ви вже граєте!", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.menuLogin:
+                Intent igl = new Intent(MainActivity.this, Login.class);
+                startActivity(igl);
+                return true;
+            case R.id.menuParam:
+                Intent igp = new Intent(MainActivity.this, start.class);
+                startActivity(igp);
+                return true;
+            case R.id.menuReg:
+                Intent igr = new Intent(MainActivity.this, Registration.class);
+                startActivity(igr);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     boolean timerIsOn;
@@ -132,6 +174,8 @@ public class MainActivity extends AppCompatActivity {
     public void seeResult() {
         Intent pass = new Intent(MainActivity.this, result.class);
         pass.putExtra("result", points);
+        pass.putExtra("login", login);
         startActivity(pass);
+        finish();
     }
 }

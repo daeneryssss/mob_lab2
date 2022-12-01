@@ -25,7 +25,7 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="80dp"
-        android:checked="true"
+        android:checked="false"
         android:onClick="checkTimer"
         android:text="таймер працює"
         android:textSize="24sp"
@@ -50,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="336dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/start"
@@ -82,4 +83,5 @@
             android:text="неправильна відповідь завершує гру"
             android:textSize="20sp" />
     </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

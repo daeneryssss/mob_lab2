@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
-    android:layout_width="300dp"
-    android:layout_height="350dp"
+    android:layout_width="350dp"
+    android:layout_height="600dp"
     android:layout_gravity="center"
     android:layout_margin="15dp"
     android:background="@color/resultBackground"
     android:gravity="center"
+    android:visibility="visible"
     tools:context=".result">
 
     <TextView
@@ -21,13 +22,14 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="168dp"
         android:background="@color/buttonBackground"
         android:onClick="showPopup"
         android:text="знову"
@@ -44,7 +46,155 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/layout_border"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:translationX="20dp"
+            android:translationY="20dp" />
+
+        <TextView
+            android:id="@+id/login1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="логін"
+            android:translationX="40dp"
+            android:translationY="20dp" />
+
+        <TextView
+            android:id="@+id/res1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:translationX="150dp"
+            android:translationY="20dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:translationX="20dp"
+            android:translationY="55dp" />
+
+        <TextView
+            android:id="@+id/login2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="логін"
+            android:translationX="40dp"
+            android:translationY="55dp" />
+
+        <TextView
+            android:id="@+id/res2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:translationX="150dp"
+            android:translationY="55dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:translationX="20dp"
+            android:translationY="90dp" />
+
+        <TextView
+            android:id="@+id/login3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="логін"
+            android:translationX="40dp"
+            android:translationY="90dp" />
+
+        <TextView
+            android:id="@+id/res3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:translationX="150dp"
+            android:translationY="90dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:translationX="20dp"
+            android:translationY="125dp" />
+
+        <TextView
+            android:id="@+id/login4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="логін"
+            android:translationX="40dp"
+            android:translationY="125dp" />
+
+        <TextView
+            android:id="@+id/res4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:translationX="150dp"
+            android:translationY="125dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:translationX="20dp"
+            android:translationY="160dp" />
+
+        <TextView
+            android:id="@+id/login5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="логін"
+            android:translationX="40dp"
+            android:translationY="160dp" />
+
+        <TextView
+            android:id="@+id/res5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:translationX="150dp"
+            android:translationY="160dp" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showTop"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:background="@color/buttonBackground"
+        android:text="Показати топ гравців"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/again"
+        app:layout_constraintVertical_bias="0.275" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

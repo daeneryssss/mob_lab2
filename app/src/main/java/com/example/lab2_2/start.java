@@ -62,7 +62,7 @@ public class start extends AppCompatActivity {
     }
 
     private int level = 1;
-    public boolean timerOn = true;
+    public boolean timerOn = false;
 
     public void checkTimer(View view) {
         timerOn = ((CheckBox) view).isChecked();
